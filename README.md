@@ -25,21 +25,37 @@ Otherwise, the J and K inputs for that flip-flop will both be “low,” placing
 Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and K inputs are connected to Vcc or Vdd, where they will be “high” all the time.
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
-**PROGRAM**
 
+**Procedure**
+
+1.Initialize the shift register to a known state (e.g., all zeros).
+
+2.Input a bit serially into the shift register.
+
+3.Shift the contents of the register one position to the right (or left).
+
+4.Output the shifted bit from the last stage of the register.
+
+5.Repeat steps 2-4 for each bit you want to input and shift.
+
+**PROGRAM**
 **Program for flipflops and verify its truth table in quartus using Verilog programming.**
 
 **Developed by: Sidharthan V**
 **RegisterNumber:212223050049**
+
 ![330487250-11c16ec7-4de3-4675-a190-60cebff36125](https://github.com/monish1545/SYNCHRONOUS-UP-COUNTER/assets/166646660/3b0c6748-6d24-42a8-a991-5ce6807f43b9)
 
 **RTL LOGIC UP COUNTER**
+
 ![330487316-a2623159-bba6-473d-a6c2-a05fd32d017d](https://github.com/monish1545/SYNCHRONOUS-UP-COUNTER/assets/166646660/a7103df8-1475-4578-8859-f23be45c2b32)
 
 **TIMING DIAGRAM FOR IP COUNTER**
+
 ![330487515-54ada763-d19c-441d-9ecb-18a948a256f8](https://github.com/monish1545/SYNCHRONOUS-UP-COUNTER/assets/166646660/2d407675-7b61-46f6-aa9e-8ed22d23f7a3)
 
 **TRUTH TABLE**
+
 ![330487597-dfaccd3f-54ee-41ba-b91a-d9034cc9c520](https://github.com/monish1545/SYNCHRONOUS-UP-COUNTER/assets/166646660/9c0bb069-e03a-4aba-b1a9-19f440c4491c)
 
 **RESULTS**
